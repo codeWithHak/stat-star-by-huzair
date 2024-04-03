@@ -129,7 +129,7 @@ else {
                 ballsFaced2.secondMatchBalls +
                 ballsFaced3.thirdMatchBalls;
             let strikeRate = (totalRunsScored / totalBallsFaced) * 100;
-            console.log(`In last series you scored ${totalRunsScored} runs and you faced ${totalBallsFaced} balls so your strike rate is ${strikeRate}`);
+            console.log(`In last series you scored ${totalRunsScored} runs and you faced ${totalBallsFaced} balls so your strike rate is ${strikeRate.toFixed(2)}`);
         }
         else if (findStrikeRate.strikeRate === "Find Collective Strike Rate Of All Matches") {
             let numberOfMatches = await inquirer.prompt({
@@ -151,7 +151,7 @@ else {
             let totalRuns = runsScored.runs;
             let totalBalls = ballsFaced.balls;
             let strikeRate = (totalRuns / totalBalls) * 100;
-            console.log(`You played ${totalMatches} matches and scored ${totalRuns} runs so your strike rate is ${strikeRate}`);
+            console.log(`You played ${totalMatches} matches and scored ${totalRuns} runs so your strike rate is ${strikeRate.toFixed(2)}`);
         }
     }
     else if (option.options === "Find Your Complete Stats") {
@@ -210,7 +210,7 @@ else {
             let strikeRate = (totalRunsScored / totalBallsFaced) * 100;
             let totalOuts = numberOfOuts.outs;
             let average = totalRunsScored / totalOuts;
-            console.log(`Your Complete Stats From Last Series:\nRuns Scored: ${totalRunsScored}\nBalls Faced: ${totalBallsFaced}\nGot Out: ${totalOuts} times\nAverage:${average.toFixed(2)}\nStrike Rate ${strikeRate}`);
+            console.log(`Your Complete Stats From Last Series:\nRuns Scored: ${totalRunsScored}\nBalls Faced: ${totalBallsFaced}\nGot Out: ${totalOuts} times\nAverage:${average.toFixed(2)}\nStrike Rate ${strikeRate.toFixed(2)}`);
         }
         else if (findStrikeRateAndAverage.strikeRateAndAverage ===
             "Find Complete Stats Of All Macthes You've Played") {
@@ -240,7 +240,7 @@ else {
             let average = totalRuns / totalOuts;
             let totalBalls = ballsFaced.balls;
             let strikeRate = (totalRuns / totalBalls) * 100;
-            console.log(`Your Overall Stats:\nMathces Played: ${totalMatches}\nRuns Scored: ${totalRuns}\nBalls Faced: ${totalBalls}\nGot Out: ${totalOuts} times\nAverage:${average.toFixed(2)}\nStrike Rate ${strikeRate}`);
+            console.log(`Your Overall Stats:\nMathces Played: ${totalMatches}\nRuns Scored: ${totalRuns}\nBalls Faced: ${totalBalls}\nGot Out: ${totalOuts} times\nAverage:${average.toFixed(2)}\nStrike Rate ${strikeRate.toFixed(2)}`);
         }
     }
 }

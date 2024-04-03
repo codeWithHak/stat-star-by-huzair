@@ -168,7 +168,7 @@ if (!user.username) {
       let strikeRate = (totalRunsScored / totalBallsFaced) * 100;
 
       console.log(
-        `In last series you scored ${totalRunsScored} runs and you faced ${totalBallsFaced} balls so your strike rate is ${strikeRate}`
+        `In last series you scored ${totalRunsScored} runs and you faced ${totalBallsFaced} balls so your strike rate is ${strikeRate.toFixed(2)}`
       );
     } else if (
       findStrikeRate.strikeRate === "Find Collective Strike Rate Of All Matches"
@@ -197,7 +197,7 @@ if (!user.username) {
       let strikeRate = (totalRuns / totalBalls) * 100;
 
       console.log(
-        `You played ${totalMatches} matches and scored ${totalRuns} runs so your strike rate is ${strikeRate}`
+        `You played ${totalMatches} matches and scored ${totalRuns} runs so your strike rate is ${strikeRate.toFixed(2)}`
       );
     }
   } else if (option.options === "Find Your Complete Stats") {
@@ -274,7 +274,7 @@ if (!user.username) {
       console.log(
         `Your Complete Stats From Last Series:\nRuns Scored: ${totalRunsScored}\nBalls Faced: ${totalBallsFaced}\nGot Out: ${totalOuts} times\nAverage:${average.toFixed(
           2
-        )}\nStrike Rate ${strikeRate}`
+        )}\nStrike Rate ${strikeRate.toFixed(2)}`
       );
     } else if (
       findStrikeRateAndAverage.strikeRateAndAverage ===
@@ -314,7 +314,7 @@ if (!user.username) {
       console.log(
         `Your Overall Stats:\nMathces Played: ${totalMatches}\nRuns Scored: ${totalRuns}\nBalls Faced: ${totalBalls}\nGot Out: ${totalOuts} times\nAverage:${average.toFixed(
           2
-        )}\nStrike Rate ${strikeRate}`
+        )}\nStrike Rate ${strikeRate.toFixed(2)}`
       );
     }
   } 
